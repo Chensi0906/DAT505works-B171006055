@@ -1,0 +1,78 @@
+<HTML>
+<head>
+</head>
+<body>
+  <script type="text/javascript">
+  function CheckNumber(){
+    var pnumber = document.getElementById('pnumber').value;
+
+    if(pnumber.lengh < 11){
+      document.getElementById("showtxt").innerHTML = "请输入正确的11位手机号码";
+    }
+    else if(pnumber.substr(0,1) !="1"){
+      document.getElementById("showtxt").innerHTML = "请输入1开头的手机号码";
+    }
+    else if(isNaN(pnumber)){
+      document.getElementById("showtxt").innerHTML = "请填写完整的手机号码";
+    }
+    else{
+      document.getElementById("showtxt").innerHTML = "是正确的号码";
+    }
+}
+    function CheckYear(){
+      var disyear = parseInt(document.getElementById("pyear").value);
+      disyear = disyear % 12;
+      switch (disyear) {
+        case 0:
+            document.getElementById("showZodiac").innerHTML = "生肖是：猴";
+            break;
+        case 1:
+            document.getElementById("showZodiac").innerHTML = "生肖是：鸡";
+            break;
+        case 2:
+            document.getElementById("showZodiac").innerHTML = "生肖是：狗";
+            break;
+        case 3:
+            document.getElementById("showZodiac").innerHTML = "生肖是：猪";
+            break;
+        case 4:
+            document.getElementById("showZodiac").innerHTML = "生肖是：鼠";
+            break;
+        case 5:
+            document.getElementById("showZodiac").innerHTML = "生肖是：牛";
+            break;
+        case 6:
+            document.getElementById("showZodiac").innerHTML = "生肖是：虎";
+            break;
+        case 7:
+            document.getElementById("showZodiac").innerHTML = "生肖是：兔";
+            break;
+        case 8:
+            document.getElementById("showZodiac").innerHTML = "生肖是：龙";
+            break;
+        case 9:
+            document.getElementById("showZodiac").innerHTML = "生肖是：蛇";
+            break;
+        case 10:
+            document.getElementById("showZodiac").innerHTML = "生肖是：马";
+            break;
+        case 11:
+            document.getElementById("showZodiac").innerHTML = "生肖是：羊";
+            break;
+            default:
+
+      }
+    }
+    </script>
+  <form id = "form1">
+    Input your PhoneNumber:<br><input type="text" id="pnumber">
+    <Input type="button" value="CHECK" onclick="CheckNumber()">
+    <div id="showtxt"></div>
+    <br>
+    input your BrithYear:<br><input type="text" id="pyear">
+    <input type="button" value="CHECK" onclick="CheckYear()">
+    <div id="showZodiac"></div>
+  </form>
+
+</body>
+</html>
