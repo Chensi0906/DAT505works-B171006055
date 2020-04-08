@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#showcolorful{
+  width:100px;
+  height: 100px;
+  background: url("colorful.jpg") no-repeat;
+}
+#showgold{
+  width:100px;
+  height: 100px;
+  background: url("gold.jpg") no-repeat;
+}
+#showyellow{
+  width:100px;
+  height: 100px;
+  background: url("yellow.jpg") no-repeat;
+}
