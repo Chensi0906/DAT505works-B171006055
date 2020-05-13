@@ -1,0 +1,296 @@
+:root{
+  --main: rgb(234, 225, 207);
+  --btn: #9491A1
+}
+
+*{
+  font-family: '微软雅黑';
+  font-weight: 100;
+}
+
+body{
+  background: var(--main);
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.home-page{
+  text-align: center;
+}
+.home-page h1{
+  padding-top: 100px;
+  font-size: 80px;
+}
+
+.btn{
+  padding: 10px 20px;
+  background: var(--btn);
+  border: rgb(121, 118, 133);
+  cursor: pointer;
+  transition: .5s;
+}
+.btn:hover{
+  filter: brightness(.8);
+}
+
+.home-page .btn{
+  margin-top: 50px;
+  width: 200px;
+  color: white;
+}
+
+.page{
+  animation: page .4s;
+  display: none;
+}
+@keyframes page{
+  0%{transform: translateY(-100px); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}
+}
+
+.info-page img{
+  width: 600px;
+}
+.info-page .describe{
+  width: 500px;
+  font-size: 30px;
+  text-indent: 60px;
+}
+
+.d-flex{
+  display: flex;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.justify-content-around{
+  justify-content: space-around;
+}
+.align-items-center{
+  align-items: center;
+}
+.text-center{
+  text-align: center;
+}
+
+.mt-3{
+  margin-top: 3rem;
+}
+
+.animal{
+  width: 200px;
+  display: inline-block;
+  position: relative;
+}
+.animal img{
+  width: 100%;
+}
+
+.game-page .animal .checkbox-item{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game-page.start .animal .checkbox-item, .game-page.start .enterAnimal, .game-page.start .animal-info{
+  display: none;
+}
+.game-page.end .btns, .game-page.end .btn-info{
+  display: none;
+}
+
+.cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  /* padding: 8px 10px; */
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  }
+  .cbx:not(:last-child) {
+  margin-right: 6px;
+  }
+  .cbx:hover {
+  background: rgba(125,100,247,0.06);
+  }
+  .cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+  }
+  .cbx span:first-child {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 2px solid #c8ccd4;
+  transition: all 0.2s ease;
+  }
+  .cbx span:first-child svg {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+  }
+  .cbx span:last-child {
+  padding-left: 8px;
+  line-height: 18px;
+  }
+  .cbx:hover span:first-child {
+  border-color: #409EFF;
+  }
+  .inp-cbx:checked + .cbx span:first-child {
+  background: #409EFF;
+  border-color: #409EFF;
+  animation: wave 0.4s ease;
+  }
+  .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+  }
+  
+  @-moz-keyframes wave {
+  50% {
+      transform: scale(0.9);
+  }
+  }
+  @-webkit-keyframes wave {
+  50% {
+      transform: scale(0.9);
+  }
+  }
+  @-o-keyframes wave {
+  50% {
+      transform: scale(0.9);
+  }
+  }
+  @keyframes wave {
+  50% {
+      transform: scale(0.9);
+  }
+  }
+    
+  .inline-svg {
+      position: absolute;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      user-select: none;
+  }
+
+
+.game-page .btns{
+  margin-top: 30px;
+}
+.game-page .btn-item{
+  display: inline-block;
+  margin-top: 20px;
+}
+.game-page .btns .btn{
+  width: 100px;
+  height: 40px;
+  vertical-align: middle;
+}
+.checkbox-item{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.riddle p:first-child{
+  font-size: 40px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.riddle .text-center{
+  margin-top: 100px;
+}
+
+.animals{
+  margin-top: 100px;
+}
+
+.closeNum{
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  
+}
+
+.speak{
+  width: 190px;
+  background: white;
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  animation: .6s speak;
+}
+.bubbleTail{position:absolute;top:100%;left:54px;width:16px;height:16px;border-width:0;border-style:solid;border-color:transparent;margin-top:-3px;border-right-width:10px;border-right-color:currentColor;border-radius:0 0 32px 0;color:white;}
+
+@keyframes speak{
+  0%{transform: scale(.8);}
+  70%{transform: scale(1.2);}
+  100%{transform: scale(1);}
+}
+
+.enterAnimal{
+  color: white;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+
+.reset-page .btn{
+  width: 220px;
+  color: white;
+  margin: 0 auto;
+  display: block;
+  margin-top: 300px;
+}
+
+.parse-page p{
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 100px;
+  font-size: 20px;
+  text-indent: 40px;
+}
+
+b{
+  font-weight: 800;
+}
+
+.parse-page .btn, .end-page .btn{
+  width: 220px;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.end-page .btn{
+  margin-top: 10px;
+}
+.end-page .btns{
+  margin-top: 200px;
+}
+
+.min{
+  width: 170px;
+}
