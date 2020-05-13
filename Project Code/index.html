@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="./js/jq.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="home-page page">
+      <div class="container">
+        <h1>Forest's Death Diary</h1>
+
+        <button class="btn" data-go="info">Start</button>
+      </div>
+    </div>
+    <div class="info-page page">
+      <div class="container">
+        <div class="d-flex justify-content-around align-items-center content">
+        </div>
+        <p class="text-center mt-3">click to continue</p>
+      </div>
+    </div>
+    <div class="game-page page">
+      <div class="container">
+        <div class="riddle step">
+          <p></p>
+          <p class="text-center">click to continue</p>
+        </div>
+        <div class="select step">
+          <h3 class="closeNum">residue degree: <span>3</span></h3>
+          <h3 class="animal-info">Please select the animal you think is suspect</h3>
+          <div class="animals"></div>
+          <p class="btn-info">Please select the sound of the animal in the riddle</p>
+          <div class="btns">
+          </div>
+          <button class="btn enterAnimal">check</button>
+        </div>
+        <svg class="inline-svg">
+          <symbol id="check" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+    <div class="reset-page page">
+      <button class="btn" data-go="home">again</button>
+    </div>
+    <div class="end-page page">
+      <div class="btns">
+        <button class="btn" data-go="parse">case analysis</button>
+        <button class="btn" data-go="home">again</button>
+      </div>
+    </div>
+    <div class="parse-page page">
+      <p>After a night of interrogation, we got the answer finally<b>motivate for committing the crime</b>:The leader of the hyena group and the vultures coveted the forest master for a long time, so they wanted to conspire to kill the lion and then divide the power, so the murder was carried out on a rainy day. I thought that the trace can be eliminated by rainy day, but it has not been cleaned up. complete. <b> Crime tactics </ b>: The hyenas threaten the lions first, and make the lions angry to make a dispute with them. They can attack the lions justifiably and force the lions to the edge of the cliff. The lions are old and have many wounds on their bodies. Accidentally rolled off the cliff. After seeing the lion falling off the cliff, the vulture found the largest stone around the cave and dropped it on the lion's head, causing the lion to fall into a coma. Finally, the lion wanted to wake himself up and walked to the river, because the congestion in the skull eventually fell into the river and died.
+      </p>
+      <button class="btn" data-go="home">again</button>
+    </div>
+  </div>
+
+  <script src="./js/view.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
